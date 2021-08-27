@@ -1,0 +1,113 @@
+/* 제작 완료 후 부분 별로 색 변경 */
+/* :root {
+  --text-color: pink;
+  --background-color: grey;
+  --accent-color: rgb(166, 205, 221);
+}
+/* 단 ! 기존에 제작한 색 요소들은 하나의 생생으로 지정 하지 말고,
+var(--text-color) 와 같은 변수로 지정 해야 된다. */
+
+body {
+  /* 웹브라우저 와 박스 사이에 빈 공간 없애기 */
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex; /* 야 너는 이제 flexbox야 */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263343;
+  /* border: 1px solid black; */
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  /* border: 1px solid black; */
+  font-size: 24px;
+  color: white;
+}
+
+.navbar_logo i {
+  color: orange;
+}
+
+.navbar__menu {
+  /* border: 1px solid black; */
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+
+/* 메뉴에 마우스를 올렸을 때, 색 변경 */
+.navbar__menu li:hover {
+  background-color: #d49466;
+  border-radius: 4px;
+}
+
+.navbar__icons {
+  /* border: 1px solid black; */
+  display: flex;
+  list-style: none;
+  color: white;
+  padding-left: 0px;
+}
+
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+.navbar__toggleBtn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+  display: none;
+}
+
+/* 뛰어쓰기 중요 !! */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .navbar__toggleBtn {
+    display: block;
+  }
+
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+}

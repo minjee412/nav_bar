@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav_Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ab425b2d43.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar"> <!-- 요소들을 다 묶을 수 있는 제일 큰 박스 -->
+        <div class="navbar_logo">
+            <i class="fab fa-accusoft"></i>
+            <a href=""> DreamCoding </a>
+        </div>
+
+        <ul class="navbar__menu">
+
+            <!-- li>a*5 : a만 5번 반복-->
+            <!-- li와 a를 같이 반복 하려면 그룹화 필요 -->
+            <!-- ➡️ (li>a)*5 -->
+            <li><a href="">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Weddings</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Bookings</a></li>    
+        </ul>
+        
+        <ul class="navbar__icons">
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-facebook"></i></li>
+        </ul>
+
+        <a href="#" class="navbar__toggleBtn">
+            <!-- href의 "" 안에 아무것도 없으면 눌렀을때 계속 새로고침? 이 된다 -->
+            <i class="fas fa-bars"></i>
+        </a>
+    
+    </nav>
+</body>
+</html>
